@@ -1,0 +1,109 @@
+:root {
+    --primary-color:#001730   ;
+    --secondary-color : #4AD7D1;
+    --main-color :  #FE4A49;
+}
+@media (max-width : 991px ){
+    .home {
+        padding-top: 144px;
+    }
+}
+footer i {
+    font-size: 32px;
+}
+
+form .btn-primary:hover {
+    background-color: var(--main-color)!important;
+    border-color: var(--main-color)!important;
+}
+
+h5, .h5 {
+    font-size: 1.25rem !important;
+}
+.btn {
+    /* display: inline-block;
+    font-weight: 400;
+    color: #6c7293;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    
+    font-size: 0.875rem ;
+    line-height: 1.5; */
+    padding: 0.625rem 1.25rem !important;
+    border-radius: 50px !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary {
+    color: #fff !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary-color) !important; 
+    border-color: var(--secondary-color) !important;
+
+}
+.btn-success  {
+    background-color:transparent !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+.btn-success:hover{
+    background-color: var(--secondary-color) !important ;
+    border-color: var(--secondary-color) !important ;
+}
+.card {
+    min-height: 427px;
+}
+.dropdown-item:active {
+    background-color: var(--primary-color) !important;
+}
+
+.footer {
+    background: var(--primary-color) url(../img/footer/footer_bg.svg);
+    background-size: cover;
+    background-position: left bottom;
+}
+.footer-bottom {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+}
+.home {
+	padding-top: 150px;
+}
+.list-footer .footer-link {
+    text-decoration: none;
+    color: white;
+}
+.list-footer li {
+    list-style-type: none;
+}
+.nav-link, .navbar .navbar-brand {
+    color: white !important;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.nav-link:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar .navbar-nav .nav-item {
+    margin-right: 0.25rem;
+    margin-right: 0.25rem;
+    margin-top: 5px;
+}
+.navbar {
+    width: 100%;
+    padding: 1.875rem 1rem;
+    background: var(--primary-color);
+}
+.strong-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d1d7dc;
+    border-radius: 50%;
+}
