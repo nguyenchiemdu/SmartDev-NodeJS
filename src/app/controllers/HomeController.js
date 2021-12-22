@@ -16,7 +16,6 @@ class HomeController {
         var callApi = axios.request(options)
         Promise.all([Category.find(), TopCategory.find(),callApi])
             .then(respond => {
-                console.log(respond[2])
                 res.render('home', { categories: respond[0], topCategories: respond[1],courses : respond[2].data });
             })
             .catch(e => next(e))
