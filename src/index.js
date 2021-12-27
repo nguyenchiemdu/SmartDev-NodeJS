@@ -4,12 +4,17 @@ const path = require('path')
 const app = express()
 const morgan = require('morgan')
 const port = process.env.PORT || 3000
+const cookieParser = require('cookie-parser')
 
 
 const route = require('./routes/index_route.js')
-const db = require('./config/db/index_db');
+const db = require('./config/db/index_db')
 // Connect to DB
 db.connect()
+// cookie parser
+app.use(cookieParser())
+// URL encode
+app.use(express.urlencoded())
 // Static Directory
 app.use(express.static(path.join(__dirname, 'public')))
 // Template engine
