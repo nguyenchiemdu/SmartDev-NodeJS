@@ -33,7 +33,6 @@ class HomeController {
     let payload
     try {
       payload = jwt.verify(req.cookies.accessToken, process.env.ACCESS_TOKEN_SECRET)
-      console.log(payload)
 
     }
     catch (e) {
@@ -41,12 +40,11 @@ class HomeController {
       payload = null;
     }
     const email = payload == null ? null : payload.email
-    
+
     // get Data from Database
     Promise.all([Category.find(), TopCategory.find(), Course.find()])
       .then(respond => {
-        // console.log(JSON.stringify(respond[2].data))
-        res.render('home', { categories: respond[0], topCategories: respond[1], courses: respond[2], email : email });
+        res.render('home', { categories: respond[0], topCategories: respond[1], courses: respond[2], email: email });
       })
       .catch(e => next(e))
   }

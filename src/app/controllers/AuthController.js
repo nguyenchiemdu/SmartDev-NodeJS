@@ -7,10 +7,10 @@ const { redirect } = require('express/lib/response')
 
 
 class AuthController {
-    // POST /json xac thuc nguoi dung va tra ve jwt to client
+    // POST / xac thuc nguoi dung va tra ve jwt to client
     async login(req, res, next) {
         try {
-            // Authentication
+            // Authentication 
             const user = await User.findOne({ email: req.body.email, password: req.body.password })
             if (!user) return res.sendStatus(401)
             //Create JWT
@@ -64,7 +64,7 @@ class AuthController {
 }
 
 generateToken = (payload) => {
-    const accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET,{expiresIn : '15s'})
+    const accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET,{expiresIn : '10d'})
     const refreshToken = jwt.sign(payload, process.env.ACCESS_TOKEN_REFRESH)
     return { accessToken, refreshToken }
 }
